@@ -1,8 +1,8 @@
 /*
-	Transforms the type text into the pixel text
-	@divSize : size of aa piwel block
+	Transforms text into the pixel text
+	@divSize : size of a signle pixel block
 	@defaultColor : color the pixels
-	@text : string that has to be transforme into piwel text
+	@text : string that has to be transforme into pixel text
 	@outputFieldId : id of the element which will contain the pixel text
 */
 
@@ -13,7 +13,6 @@ function pixelize(divSize = 5, defaultColor = "black", text = "text", outputFiel
 		text = text.toUpperCase();
 		// validation that text has only authorized char
 		if(validateInput(text)){
-
 			let txt = new Text(text);
 			let field = document.getElementById(outputFieldID);
 			field.innerHTML = "";
@@ -40,15 +39,14 @@ function validateInput(s){
 	}
 }
 /*
-	this function transforms the text givven into html by creating divs
+	this function transforms the pixel text given into html by creating divs
 	@element in which to insert the code
-	@txt : Text object to show
+	@txt : Text object to transform
 	@divSize : size of a pixel
-	@defaultColor : colorof a pixel
+	@defaultColor : color of a pixel
 */
 function loadText(element, txt, divSize, defaultColor){
 	element.innerHTML ="";
-	//console.log(element);
 	let passage = 0;
 	let minWidth = Math.min(divSize*7*txt.letters.length, element.offsetWidth);
 	let checkPoint = new createLine(minWidth, divSize*7, "display : flex; flex-wrap: wrap;");
@@ -67,7 +65,6 @@ function loadText(element, txt, divSize, defaultColor){
 
 // creates the div containing one letter
 function pixelLetter(square,pixel, divSize, defaultColor){
-	//console.log(pixel);
 	for(i = 0; i < 7; i++){
 		let line = createLine(divSize*7, divSize, "display : flex;");
 		for(j = 0; j < 7; j++){
@@ -85,7 +82,7 @@ function createSquare(size, color, display, defaultColor){
 	return square;
 }
 
-// creates a line einwhich the letter will comme
+// creates a line in which the letters will comme
 function createLine(width, height, display){
 	let rectangle = document.createElement("div");
 	rectangle.style ="width: "+width+"px; height: "+height +"px; "+display+";";

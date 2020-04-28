@@ -1,3 +1,7 @@
+/**
+	Class representing a single pixel letter
+	Parent of every letter 
+*/
 class Letter{
 	constructor(s){
 		this.letter =s;
@@ -18,6 +22,7 @@ class Letter{
 		}
 	}
 
+	// for debug purposes, shows the disposition of the letter in string form
 	toString(){
 		let retour = "";
 		this.pixels.forEach((line)=>{
@@ -29,6 +34,9 @@ class Letter{
 		return retour;
 	}
 }
+/********************************************************/
+/*	Every letter has its own object that extends Letter	*/
+/********************************************************/
 
 /*
 _______

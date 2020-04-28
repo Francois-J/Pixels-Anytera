@@ -5,12 +5,13 @@ class Text{
 	constructor(txt){
 		this.letters = [];
 		for(let c of txt){
+			// we interprete every letter 
 			this.letters.push(this.getLetter(c.toUpperCase()));
 		}
 	}
 
 	/*
-		Methode that transforms the typed letters into pixel letters
+		Method that transforms the typed letters into pixel letters object
 	*/
 	getLetter(c){
 		switch(c){

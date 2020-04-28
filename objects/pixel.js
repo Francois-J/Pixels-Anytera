@@ -33,11 +33,12 @@ class Pixel{
 		this.used = true;
 		this.on = true;
 	}
-
+	// remove the color from the pixel
 	static turnOff(pix){
 		pix.on = false;
 	}
 
+	// signals to add color to the pixel
 	static turnOn(pix){
 		pix.on = true;
 	}
