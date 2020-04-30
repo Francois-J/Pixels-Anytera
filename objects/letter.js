@@ -1049,7 +1049,6 @@ class LetterPipe extends Letter{
 		this.pixels[4][3].init();
 		this.pixels[5][3].init();
 		this.pixels[6][3].init();
-		this.pixels[7][3].init();
 	}
 }
 

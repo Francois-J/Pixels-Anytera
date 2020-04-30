@@ -33,7 +33,7 @@ function pixelize(divSize = 5, defaultColor = "black", text = "text", outputFiel
 	Validation function to ensure only allowed charaters are typed
 */
 function validateInput(s){
-	var letters = /^[A-Z '\.\?!\n^(){}\[\]+-=#,|\\/:;\*0-9_%&’]*$/;
+	var letters = /^[A-Z \'\.\?!\n^(){}\[\]+-=#,\|\\/:;\*0-9_%&’]*$/;
 	if(s.match(letters)){
 		return true;
 	}

@@ -6,7 +6,12 @@ class Text{
 		this.letters = [];
 		for(let c of txt){
 			// we interprete every letter 
-			this.letters.push(this.getLetter(c.toUpperCase()));
+			console.log(c);
+			let letter = this.getLetter(c.toUpperCase());
+			if(letter != null)
+				this.letters.push(letter);
+			console.log(c);
+			console.log(letter);
 		}
 	}
 
@@ -91,7 +96,9 @@ class Text{
 			return new Letter(" "); break;
 			case "’":
 			return new LetterApostrophe(); break;
-			case "’":
+			case "'":
+			return new LetterApostrophe(); break;
+			case "`":
 			return new LetterApostrophe(); break;
 			case ".":
 			return new LetterDot(); break;
@@ -142,8 +149,7 @@ class Text{
 			case "%":
 			return new LetterPercent(); break;
 			default:
-			return null; break;
+			return console.log(c +" is not supported"); break;
 		}
-		return null;
 	}
 }
