@@ -45,7 +45,7 @@ function spray(divSize, color, text, prob, elementID)
 
 ```
 
-*Spray* is contained in the *spray.js* file and isn't necessary to run the rest of the project. I just addes it as it's part of the game I created where you have to guess slogans or idoms that are pixelized and are missing some pixels (self promo : [pixels.anytera.com](http://pixels.anytera.com))
+*Spray* is contained in the *spray.js* file and isn't necessary to run the rest of the project. I just addes it as it's part of the game I created where you have to guess slogans or idoms that are pixelized and are missing some pixels (self promo : [pixels.anytera.com](https://pixels.anytera.com))
 
 If you're only interested in the pixel object just follow the comments in *text.js*. To add more valid character cahnge the regex in *pixelize.js*, add it to *letter.js* and to ths switch in *text.js*
 
