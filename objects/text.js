@@ -6,12 +6,9 @@ class Text{
 		this.letters = [];
 		for(let c of txt){
 			// we interprete every letter 
-			console.log(c);
 			let letter = this.getLetter(c.toUpperCase());
 			if(letter != null)
 				this.letters.push(letter);
-			console.log(c);
-			console.log(letter);
 		}
 	}
 
